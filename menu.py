@@ -2,7 +2,7 @@ class Menu:
     def __init__(self):
         self.items = []
 
-    def add(self, item, price):
+    def add_food(self, item, price):
         self.items.append({'item': item, 'price': price})
 
     def show(self):
