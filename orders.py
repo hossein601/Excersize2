@@ -36,7 +36,7 @@ class Order:
                 output += f'bill of items = {order["items"]}\n'
                 output += f'bill of total_price = {order["total_price"]}\n'
                 for item in order['items']:
-                    output += f"{item['name']} - ${item['price']}"
+                    output += f"{item['costumer']} - ${item['price']}"
                 output += f"Total: ${order['total_price']}"
                 return output
         return "Order not found"
