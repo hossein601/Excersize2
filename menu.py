@@ -13,7 +13,7 @@ class Menu:
 
     def get_items(self, name):
         for item in self.items:
-            if item['name'] == name:
+            if item['item'] == name:
                 return item
         return None
 

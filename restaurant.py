@@ -22,20 +22,18 @@ class Restaurant:
     def showReserve(self):
         self.reserve.show_reserve()
 
-    def reservation(self):
-        self.reserve.reservation()
+    def make_reservation(self, customer_name, number_of_people, time):
+        return self.reserve.reservation(customer_name, number_of_people, time)
 
     def add_staff(self, name, position):
         self.staff.add_staff(name, position)
 
     def get_order(self, customer_name, items):
-        self.order.place_order(customer_name, items,self.menu)
+        self.order.place_order(customer_name, items, self.menu)
 
-    def show_oder(self):
-        self.order.show_orders()
+    def show_orders(self):
+        return self.order.show_all_orders()
 
     def generate_bill(self, order_id):
         self.order.generate_bill(order_id)
-    def add_food(self):
-        self.menu.add_food()
 
