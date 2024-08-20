@@ -23,15 +23,15 @@ while True:
         print(my_restaurant.showMenu())
 
     elif choice == '2':
-        item_name = input("Enter the name of the food item: ")
-        item_price = float(input("Enter the price of the food item: "))
+        item_name = input("Enter the name of food you want")
+        item_price = int(input("Enter the price of your food: "))
         my_restaurant.menu.add_food(item_name, item_price)
-        print(f"{item_name} has been added to the menu.")
+        print(f"{item_name} with price of{item_price} was added.")
 
     elif choice == '3':
         customer_name = input("Enter your name: ")
         number_of_people = int(input("Enter the number of people: "))
-        time = input("Enter the reservation time (e.g., 7:00 PM): ")
+        time = input("Enter the resevation time for your reserve ")
         print(my_restaurant.make_reservation(customer_name, number_of_people, time))
 
     elif choice == '4':
@@ -39,8 +39,8 @@ while True:
         print(my_restaurant.showReserve())
 
     elif choice == '5':
-        staff_name = input("Enter the name of the staff: ")
-        position = input("Enter the staff position: ")
+        staff_name = input("Enter the staff name ")
+        position = input("Enter the position of your staff: ")
         print(my_restaurant.add_staff(staff_name, position))
 
     elif choice == '6':
@@ -49,7 +49,7 @@ while True:
 
     elif choice == '7':
         customer_name = input("Enter your name: ")
-        items = input("Enter the food items you want to order (comma separated): ").split(',')
+        items = input("Enter the food items you want to order : ").split(',')
         print(my_restaurant.get_order(customer_name, [item.strip() for item in items]))
 
     elif choice == '8':
@@ -61,8 +61,8 @@ while True:
         print(my_restaurant.generate_bill(order_id))
 
     elif choice == '10':
-        print("Exiting the system. Have a nice day!")
+        print("good by!")
         break
 
     else:
-        print("Invalid option, please try again.")
+        print("enter between 1 to 10")
