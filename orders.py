@@ -1,3 +1,4 @@
+import pandas as pd
 class Order:
     def __init__(self):
         self.counter_id = 1
@@ -25,7 +26,7 @@ class Order:
     def show_all_orders(self):
         ordering = ""
         for order in self.orders:
-            ordering += f"Order ID: {order['order_id']}, Customer: {order['costumer']}, Total: ${order['total_price']}"
+            ordering += f"Order ID: {order['order_id']}, Customer: {order['costumer']}, Total: {order['total_price']}"
         return ordering
 
     def generate_bill(self, order_id):

@@ -3,7 +3,7 @@ class Staff:
         self.staffs = []
 
     def add_staff(self, name, works):
-        self.staffs.append({'name': name, 'works': works})
+        self.staffs.append(dict(name=name, works=works))
         return f'Added {name} works for {works} staff'
 
     def get_staffs(self):

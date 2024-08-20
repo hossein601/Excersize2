@@ -16,51 +16,52 @@ while True:
           "10. End\n"
           )
 
-    choice = input("Please enter your choice: ")
+    select = input("Please enter your select: ")
 
-    if choice == '1':
+    if select == '1':
         print("\nMenu:")
+
         print(my_restaurant.showMenu())
 
-    elif choice == '2':
-        item_name = input("Enter the name of food you want")
-        item_price = int(input("Enter the price of your food: "))
-        my_restaurant.menu.add_food(item_name, item_price)
-        print(f"{item_name} with price of{item_price} was added.")
+    elif select == '2':
+        name = input("Enter the name of food you want")
+        price = int(input("Enter the price of your food: "))
+        my_restaurant.menu.add_food(name, price)
+        print(f"{name} with price of{price} was added.")
 
-    elif choice == '3':
-        customer_name = input("Enter your name: ")
+    elif select == '3':
+        name = input("Enter your name: ")
         number_of_people = int(input("Enter the number of people: "))
-        time = input("Enter the resevation time for your reserve ")
-        print(my_restaurant.make_reservation(customer_name, number_of_people, time))
+        time = input("Enter the reservation time for your reserve ")
+        print(my_restaurant.make_reservation(name, number_of_people, time))
 
-    elif choice == '4':
+    elif select == '4':
         print("\nReservations:")
         print(my_restaurant.showReserve())
 
-    elif choice == '5':
+    elif select == '5':
         staff_name = input("Enter the staff name ")
         position = input("Enter the position of your staff: ")
         print(my_restaurant.add_staff(staff_name, position))
 
-    elif choice == '6':
+    elif select == '6':
         print("\nStaff:")
         print(my_restaurant.staff.get_staffs())
 
-    elif choice == '7':
-        customer_name = input("Enter your name: ")
+    elif select == '7':
+        name = input("Enter your name: ")
         items = input("Enter the food items you want to order : ").split(',')
-        print(my_restaurant.get_order(customer_name, [item.strip() for item in items]))
+        print(my_restaurant.get_order(name, items))
 
-    elif choice == '8':
+    elif select == '8':
         print("\nOrders:")
         print(my_restaurant.show_orders())
 
-    elif choice == '9':
+    elif select == '9':
         order_id = int(input("Enter the order ID to generate the bill: "))
         print(my_restaurant.generate_bill(order_id))
 
-    elif choice == '10':
+    elif select == '10':
         print("good by!")
         break
 
