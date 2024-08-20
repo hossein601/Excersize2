@@ -3,19 +3,20 @@ from restaurant import Restaurant
 
 my_restaurant = Restaurant("azarbaijan", "jomhori")
 while True:
-    print("\nWelcome to the Restaurant Management System!")
-    print("1. Show Menu")
-    print("2. Add Menu Item")
-    print("3. Make a Reservation")
-    print("4. Show Reservations")
-    print("5. Add Staff")
-    print("6. Show Staff")
-    print("7. Place an Order")
-    print("8. Show Orders")
-    print("9. Generate Bill")
-    print("10. Exit")
+    print("Enter your operation")
+    print("1. menu\n"
+          "2. menu items\n"
+          "3. Make Reservation\n"
+          "4. Show Reservations\n"
+          "5. Add Staff\n"
+          "6. Show Staff\n"
+          "7. Make an Order\n"
+          "8. Show Orders\n"
+          "9. bill generate\n"
+          "10. End\n"
+          )
 
-    choice = input("Please select an option: ")
+    choice = input("Please enter your choice: ")
 
     if choice == '1':
         print("\nMenu:")
